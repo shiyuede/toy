@@ -1,0 +1,24 @@
+#footer{
+  width:100%; padding:0; margin:0;
+}
+#footer>*{
+  width:1000px;
+  margin:0 auto;
+}
+.left{position:absolute;
+  top:-22px;
+  left:142px;
+}
+.right{position:absolute;
+  top:16px;
+  left:4px;
+}
+.col-6 col-md pl-4 pr-0{position:absolute;
+  top:20px;
+  left:800px;
+}
+.col-6 col-md pl-5 pr-0{position:absolute;
+  top:20px;
+  left:600px;
+}
+.copy{text-align: center;}

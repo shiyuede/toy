@@ -1,0 +1,246 @@
+﻿
+
+*{margin:0;padding:0;}
+/*轮播图*/
+
+		li{
+			list-style:none;
+		}
+		#banner{
+				width:1000px;
+				height:400px;
+				margin:50px auto;
+				position:relative;
+			}
+			#banner .pic{
+				width:100%;
+				height:100%;
+				position:relative;
+			}
+			#banner .pic ul li{
+				position:absolute;
+				display:none;
+			}
+			#banner .tab{
+				width:148px;
+				height:20px;
+				position:absolute;
+				bottom:10px;
+				left:50%;
+				margin-left:-70px;
+			}
+			#banner .tab ul li{
+				width:18px;
+				height:18px;
+				background:#666;
+				border-radius:100%;
+				float:left;
+				margin:1px 3px;
+				color:#fff;
+				text-align:center;
+				line-height:18px;
+				font-family:'Microsoft yahei';
+				font-size:12px;
+				cursor:pointer;
+			}
+			#banner .tab ul li.on{
+				background:#f60;
+			}
+			#banner .btn{
+				display:none;
+			}
+			#banner .btn div{
+				width:30px;
+				height:60px;
+				background:rgba(0,0,0,0.3);
+				text-align:center;
+				line-height:60px;
+				color:#fff;
+				font-size:24px;
+				position:absolute;
+				top:50%;
+				margin-top:-30px;
+				cursor:pointer;
+			}
+			#leftBtn{
+				left:0;
+			}
+			#rightBtn{
+				right:0;
+			}
+
+/*手风琴效果*/
+
+			body{
+				background:url(img/index/accordion_bg.jpg) center top no-repeat;
+			}
+
+			#wrap{
+				width:1090px;
+				height:429px;
+				margin:160px auto;
+				overflow:hidden;
+			}
+			#wrap ul{
+				width:120%;
+			}
+			#wrap ul li{
+				list-style:none;
+				width:100px;
+				height:429px;
+				float:left;
+			}
+			#wrap ul li .txt{
+				width:100px;
+				height:429px;
+				background:rgba(0,0,0,.5);
+				overflow:hidden;
+			}
+			#wrap ul li .txt p{
+				padding:0px 42px;
+				background:rgba(0,0,0,.5);
+				color:#fff;
+				font-family:'Microsoft yahei';
+				font-size:14px;
+			}
+
+
+
+/*第一层*/
+
+
+		.text-primary {
+    color: #26717b !important;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #256765;
+    border-color:#1da1ad ;
+}
+
+
+
+		#container{
+			width:1000px;
+			margin:0 auto;
+			display:flex;
+			flex-wrap:wrap;/*项目可以换行*/
+			justify-content:space-between;/*两端对齐*/
+		}
+		#container>div{
+			background:#ddd;
+			margin-bottom:10px;
+			position:relative;
+		}
+		#container>div:first-child{
+			width:609px;height:377px;
+		}
+		#container>div:nth-child(2){
+			width:381px;height:377px;
+		}
+		#container>div:nth-child(3){
+			width:377px;height:235px;
+		}
+		#container>div:nth-child(4){
+			width:198px;height:235px;
+		}
+		#container>div:nth-child(5){
+			width:198px;height:235px;
+		}
+		#container>div:nth-child(6){
+			width:198px;height:235px;
+		}
+	
+		/*第一个div中的具体样式*/
+		div.desc{
+			width:245px;height:243px;
+			position:absolute;
+			top:50px;left:60px;
+		}
+		#container>div:nth-child(1)>img{
+			position:absolute;
+			top:55px;right:30px;
+		}
+		#d1{height:250px;}
+		/*dese中具体样式*/
+		div.desc p.name{
+			font:bold 18px 幼圆;color:#333;
+			position:absolute;
+			top:-22px;left:-6px;
+		}
+		div.desc p.details{
+			font:bold 12px 幼圆;color:#666;
+			margin-bottom:20px;
+			position:absolute;
+			top:18px;left:-19px;
+		}
+		div.desc p.price{
+			color:#27777d;
+			font-size:24px;
+			margin-bottom:20px;
+			position:absolute;
+			top:86px;left:0px;
+		}
+		div.desc a.view{
+			width:130px;height:-12px;
+			display:block;
+			background:linear-gradient(to bottom,pink,#64a1c0);
+			text-align:center;
+			line-height:40px;
+			border-radius:5px;
+			color:#1a7297;
+			text-decoration:none;
+			position:absolute;
+			top:139px;left:-12px;
+		}
+		/*第二个div*/
+		#container>div:nth-child(2)>div.desc{
+			top:38px;left:24px;
+		}
+		#container>div:nth-child(2)>img{
+		position:absolute;
+			bottom:18px;right:15px;
+		}
+		#d2{height:210px;}
+	        /*第三个div*/
+		#container>div:nth-child(3)>div.desc{
+			top:38px;left:24px;
+		}
+		#container>div:nth-child(3)>img{
+		position:absolute;
+			bottom:18px;right:15px;
+		}
+		#d3{height:180px;}
+		/*第四个div*/
+		#container>div:nth-child(4)>div.desc{
+			top:38px;left:24px;
+		}
+		#container>div:nth-child(4)>img{
+		position:absolute;
+		top:50px;left:60px;
+		bottom:18px;right:15px;
+		}
+		#d4{height:100px;}
+		/*第五个div*/
+		#container>div:nth-child(5)>div.desc{
+			top:38px;left:24px;
+		}
+		#container>div:nth-child(5)>img{
+		position:absolute;
+		top:50px;left:60px;
+		bottom:18px;right:15px;
+		}
+		#d5{height:100px;}
+		/*第六个div*/
+		#container>div:nth-child(6)>div.desc{
+			top:77px;left:91px;
+		}
+		#container>div:nth-child(6)>img{
+		position:absolute;
+		top:50px;left:60px;
+		bottom:18px;right:15px;
+		}
+		#d6{height:100px;}
+
+

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style type='text/css'>
+	body{
+				background:url(img/index/accordion_bg.jpg) center top no-repeat;;
+			}
+	</style>
+</head>
+<body>
+		<div id="banner">
+		<div class="pic">
+			<ul>
+				<li style="display:block;">
+				<a href="">
+					<img src="img/index/banner1.jpg" alt="">
+				</a>
+				</li>
+				<li>
+					<a href="">
+					<img src="img/index/banner2.jpg" alt="">
+				</a>
+				</li>
+				<li>
+					<a href="">
+					<img src="img/index/banner3.jpg" alt="">
+				</a>
+				</li>
+				<li>
+					<a href="">
+					<img src="img/index/banner4.jpg" alt="">
+				</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="tab">
+				<ul>
+					<li class="on">1</li><li>2</li><li>3</li><li>4</li>
+				</ul>
+			</div>
+
+			<div class="btn">
+				<div id="leftBtn">&lt;</div>
+				<div id="rightBtn">&gt;</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			
+			var $tabLi = $('#banner .tab li');
+			var $picLi = $('#banner .pic li');
+			var $btn = $('#banner .btn');
+			var $btnDiv = $('#banner .btn div');
+			var $banner = $('#banner');
+			var index = 0;
+			var timer;
+
+			$tabLi.hover(function(){
+				index = $(this).index();
+				fn();
+			});
+
+			$banner.hover(function(){
+				$btn.show();
+				clearInterval(timer);
+			},function(){
+				$btn.hide();
+				auto();
+			});
+
+			$btnDiv.click(function(){
+				var i = $(this).index();
+				if ( i )
+				{
+					index ++;
+					index %= $tabLi.length;
+				}
+				else
+				{
+					index --;
+					if(index<0)index = $tabLi.length-1;
+				}
+				fn();
+			}).mousedown(function(){
+				return false;
+			});
+			
+			auto();
+			function auto(){
+				timer = setInterval(function(){
+					index ++;
+					index %= $tabLi.length;
+					fn();
+				},5000);
+			}
+			function fn(){
+				$tabLi.eq(index).addClass('on').siblings().removeClass('on');
+				$picLi.eq(index).stop(true).fadeIn().siblings().stop(true).fadeOut();
+			}
+		});
+		</script>
+		
+		<div id="wrap">
+		<ul>
+			<li style="background-image:url(img/index/accordion_1.jpg)">
+				<div class="txt">
+					<p>熊抱抱公仔丨丨送给你们一世纪温柔</p>
+				</div>
+			</li>
+			<li style="background-image:url(img/index/accordion_2.jpg)">
+				<div class="txt">
+					<p>猪小屁公仔丨丨独属于你一人的可爱</p>
+				</div>
+			</li>
+			<li style="background-image:url(img/index/accordion_3.jpg)">
+				<div class="txt">
+					<p>瞪蹬小黄鸭丨丨为你们跳一支潮舞蹈  </p>
+				</div>
+			</li>
+			<li style="background-image:url(img/index/accordion_4.jpg); width:789px;">
+					<div class='txt'>
+					<p>微笑大牙帮丨丨请叫我们一群丑萌酱</p>
+				</div>
+			</li>
+			<li style="background-image:url(img/index/accordion_5.jpg);width:789px;">
+				<div class='txt'>
+					<p>猫小咪公仔丨丨仿似轻呡一小杯清茶</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$('#wrap ul li').hover(function(){
+				$(this).stop().animate({
+					width : '789px'
+				},500).siblings().stop().animate({
+					width : '80px'
+				},500);
+			});
+		</script>
+<!--一层 		 -->
+		
+
+			<div id="container">
+			<div>
+				<div class="desc">
+					<p class="name">熊抱抱熊公仔</p>
+					<p class="details">大号泰迪熊熊猫玩偶可爱布娃娃大熊毛绒玩具女孩抱枕</p>
+					<p class="price">￥688.00</p>
+					<a href="#" class="view">查看详情</a>
+				</div>
+				<img id="d1" src="bear_01.jpg" alt="">
+			</div>
+			<div>
+				<div class="desc">
+					<p class="name">网红小黄鸭</p>
+					<p class="details">抖音同款小黄鸭毛绒玩具公仔网红玩偶娃娃鸭子抱枕</p>
+					<p class="price">￥208.00</p>
+					<a href="#" class="view">查看详情</a>
+				</div>
+				<img id="d2" src="duck_01.jpg" alt="">
+			</div>
+			<div>
+				<div class="desc">
+					<p class="name">猪小屁工仔</p>
+					<p class="details">正版猪小屁公仔小猪玩偶毛绒玩具可爱大娃娃抱枕</p>
+					<p class="price">￥190.00</p>
+					<a href="#" class="view">查看详情</a>
+				</div>
+				<img id="d3" src="pig_01.jpg" alt="">
+			</div>
+			<div>
+				<div class="desc">
+					<p class="name">trudi猫咪公仔</p>
+					<p class="details">意大利进口trudi可爱米白猫咪公仔小猫毛绒玩具</p>
+					<p class="price">￥219.00</p>
+					<a href="#" class="view">查看详情</a>
+					</div>
+				  <img id="d4" src="cat.jpg" alt="">
+			 </div>
+			<div>
+				<div class="desc">
+					<p class="name">小白兔公仔</p>
+					<p class="details">可爱小兔子儿童小号娃娃玩偶</p>
+					<p class="price">￥82.00</p>
+					<a href="#" class="view">查看详情</a>
+					</div>
+				  <img id="d4" src="rabbit.jpg" alt="">
+			</div>
+			<div>
+				<div class="desc">
+					<p class="name">丑萌玩偶</p>
+					<p class="details">微笑大牙小猪挂件丑萌玩偶鲨鱼等挂饰</p>
+					<p class="price">￥118.00</p>
+					<a href="#" class="view">查看详情</a>
+					</div>
+				  <img id="d4" src="small.jpg" alt="">
+			</div>
+			</div>
+		</div>
+	</body>
+</html>
